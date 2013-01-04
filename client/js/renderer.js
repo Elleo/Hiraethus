@@ -16,7 +16,7 @@ function(Camera, Item, Character, Player, Timer) {
             this.initFPS();
             this.tilesize = 16;
         
-            this.upscaledRendering = this.context.mozImageSmoothingEnabled !== undefined;
+            //this.upscaledRendering = this.context.mozImageSmoothingEnabled !== undefined;
             this.supportsSilhouettes = this.upscaledRendering;
         
             this.rescale(this.getScaleFactor());
@@ -30,7 +30,7 @@ function(Camera, Item, Character, Player, Timer) {
             this.animatedTileCount = 0;
             this.highTileCount = 0;
         
-            this.tablet = Detect.isTablet(window.innerWidth);
+            //this.tablet = Detect.isTablet(window.innerWidth);
             
             this.fixFlickeringTimer = new Timer(100);
         },
