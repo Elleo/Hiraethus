@@ -80,8 +80,11 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
                             <a href='#' onclick='setGender("female");' style='width: 64px; float: right; margin-right: 10em;'>Female<div class='charsprite' style='background-image: url("img/2/light-female.png");'><div class='charsprite' style='background-image: url("img/2/female-bangslong-blonde.png");'><div class='charsprite' style='background-image: url("img/2/female-trousers-green.png");'><div class='charsprite' style='background-image: url("img/2/female-shoes-brown.png");'><div class='charsprite' style='background-image: url("img/2/female-shirt-white.png");'></div></div></div></div></div></a>
                         </div>
                         <div id="features" style='display: none;'>
+                            <div class='charcreate'>
                             Features<br /><br />
+                            </div>
                             <center>
+                                <div class='charcreate'>
                                 <div style='float: right; margin-right: 125px;'>
                                     <div style='margin-bottom: 0.25em;'>Eyes</div>
                                     <a href='#' onclick='setEyes("blue");'><div class='colourpicker' style='background: #5187b3;'></div></a>
@@ -95,38 +98,41 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
                                     <a href='#' onclick='setSkin("tanned");'><div class='colourpicker' style='background: #fdd082;'></div></a>
                                     <a href='#' onclick='setSkin("light");'><div class='colourpicker' style='background: #fdd5b7;'></div></a>
                                 </div>
-                                <div style='float: right; position: relative; top: 30px; right: 70px;'>
-                                    <a href='#' onclick='rotateRight();' style='text-decoration: none;'>&gt;</a>
-                                </div>
-                                <div style='float: left; position: relative; top: 30px; left: 50px;'>
-                                    <a href='#' onclick='rotateLeft();' style='text-decoration: none;'>&lt;</a>
-                                </div>
-                                <div id='newchar' class='charsprite'><div id='eyes' class='charsprite'><div id='trousers' class='charsprite'><div id='shirt' class='charsprite'><div id='shoes' class='charsprite'><div id='hair' class='charsprite'></div></div></div></div></div></div><br />
-                                    Hair<br />
-                                    <span style='font-size: 10pt;'>
-                                        <a href='#' onclick='previousHair();'>Previous</a> | 
-                                        <a href='#' onclick='nextHair();'>Next</a>
-                                    </span>
-                                    <div style='margin-left: 268px; margin-top: 10px;'>
-                                        <a href='#' onclick='setHairColor("blonde");'><div class='colourpicker' style='background: #ffa801;'></div></a>
-                                        <a href='#' onclick='setHairColor("red");'><div class='colourpicker' style='background: #d50b10;'></div></a>
-                                        <a href='#' onclick='setHairColor("brown");'><div class='colourpicker' style='background: #800009;'></div></a>
-                                        <a href='#' onclick='setHairColor("black");'><div class='colourpicker' style='background: #301012;'></div></a>
+                                    <div style='float: right; position: relative; top: 30px; right: 70px;'>
+                                        <a href='#' onclick='rotateRight();' style='text-decoration: none;'>&gt;</a>
                                     </div>
-                                 </div>
+                                    <div style='float: left; position: relative; top: 30px; left: 50px;'>
+                                        <a href='#' onclick='rotateLeft();' style='text-decoration: none;'>&lt;</a>
+                                    </div>
+                                </div>
+			                	<div id='newchar' class='charsprite'><div id='eyes' class='charsprite'><div id='trousers' class='charsprite'><div id='shirt' class='charsprite'><div id='shoes' class='charsprite'><div id='hair' class='charsprite'></div></div></div></div></div></div><br />
+				                    <div class='charcreate'>
+                                        Hair<br />
+                                        <span style='font-size: 10pt;'>
+                                            <a href='#' onclick='previousHair();'>Previous</a> | 
+                                            <a href='#' onclick='nextHair();'>Next</a>
+                                        </span>
+                                        <div style='margin-left: 268px; margin-top: 10px;'>
+                                            <a href='#' onclick='setHairColor("blonde");'><div class='colourpicker' style='background: #ffa801;'></div></a>
+                                            <a href='#' onclick='setHairColor("red");'><div class='colourpicker' style='background: #d50b10;'></div></a>
+                                            <a href='#' onclick='setHairColor("brown");'><div class='colourpicker' style='background: #800009;'></div></a>
+                                            <a href='#' onclick='setHairColor("black");'><div class='colourpicker' style='background: #301012;'></div></a>
+                                        </div>
+                                        <br />
+                                        <a href='#' onclick='$(".charcreate").hide(500); $("#createname").show(500); return false;'>Done</a>
+                                    </div>
+                                <div id='createname' style='display: none; position: relative; top: -10px;'>
+                                    <form action="none" method="get" accept-charset="utf-8">
+                                        <input type="text" id="nameinput" class="stroke" name="player-name" placeholder="Name your character" maxlength="15">
+                                    </form>
+                                    <div class="play button disabled" style='position: relative; top: -5px;'>
+                                        <div></div>
+                                        <img src="img/common/spinner.gif" alt="">
+                                    </div>
+                                </div>
                             </center>
-
                         </div>
-                        <div id="character" class="disabled" style='display: none;'>
-                            <div></div>
-                        </div>
-                        <form action="none" method="get" accept-charset="utf-8" style='display: none;'>
-                            <input type="text" id="nameinput" class="stroke" name="player-name" placeholder="Name your character" maxlength="15">
-                        </form>
-                        <div class="play button disabled" style='display: none;'>
-                            <div></div>
-                            <img src="img/common/spinner.gif" alt="">
-                        </div>
+                    </div>
                     </article>
                     <article id="loadcharacter">
                              <h1>
