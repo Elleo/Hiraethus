@@ -1,4 +1,4 @@
-BrowserQuest client documentation
+Hiraethus client documentation
 =================================
 
 The client directory should never be directly deployed to staging/production. Deployment steps:

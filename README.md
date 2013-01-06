@@ -1,7 +1,7 @@
-BrowserQuest
+Hiraethus
 ============
 
-BrowserQuest is a HTML5/JavaScript multiplayer game experiment.
+BrowserQuest is a HTML5/JavaScript multiplayer game based on Mozilla BrowserQuest.
 
 
 Documentation
@@ -19,7 +19,12 @@ See the LICENSE file for details.
 
 Credits
 -------
-Created by [Little Workshop](http://www.littleworkshop.fr):
+
+Hiraethus created by:
+
+* Michael Sheldon - [@mikesheldon](http://twitter.com/mikesheldon)
+
+BrowserQuest created by [Little Workshop](http://www.littleworkshop.fr):
 
 * Franck Lecollinet - [@whatthefranck](http://twitter.com/whatthefranck)
 * Guillaume Lecollinet - [@glecollinet](http://twitter.com/glecollinet)
