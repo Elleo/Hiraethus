@@ -1,7 +1,7 @@
 Hiraethus
 ============
 
-BrowserQuest is a HTML5/JavaScript multiplayer game based on Mozilla BrowserQuest.
+Hiraethus is a HTML5/JavaScript multiplayer game based on Mozilla BrowserQuest.
 
 
 Documentation
