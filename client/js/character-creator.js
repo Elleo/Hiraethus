@@ -30,7 +30,7 @@ var rotationOffset = 128;
 function setGender(g) {
 	gender = g;
 	$("#gender").hide(500);
-	$("#newchar").css("background-image", "url('img/2/" + skinColor + "-" + gender + ".png')");
+	$("#newchar").css("background-image", "url('img/2/" + skinColor + gender + ".png')");
 	$("#trousers").css("background-image", "url('img/2/" + gender + "-trousers-green.png')");
 	$("#shirt").css("background-image", "url('img/2/" + gender + "-shirt-white.png')");
 	$("#shoes").css("background-image", "url('img/2/" + gender + "-shoes-brown.png')");
@@ -46,7 +46,7 @@ function setGender(g) {
 
 function setSkin(c) {
 	skinColor = c;
-	$("#newchar").css("background-image", "url('img/2/" + skinColor + "-" + gender + ".png')");
+	$("#newchar").css("background-image", "url('img/2/" + skinColor + gender + ".png')");
 	return false;
 }
 

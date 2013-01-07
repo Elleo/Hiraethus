@@ -13,7 +13,9 @@ define(['character', 'exceptions'], function(Character, Exceptions) {
      		this.nameOffsetY = -10;
         
             // sprites
-            this.spriteName = "clotharmor";
+            this.spriteName = "lightmale";
+	    this.hairName = "bald";
+	    this.hairColor = "blonde";
             this.weaponName = "sword1";
         
             // modes
@@ -67,10 +69,18 @@ define(['character', 'exceptions'], function(Character, Exceptions) {
         getSpriteName: function() {
             return this.spriteName;
         },
+
+	getHairSpriteName: function() {
+	    return this.hairSprite;
+	},
     
         setSpriteName: function(name) {
             this.spriteName = name;
         },
+
+	setHairSpriteName: function(name) {
+	    return this.hairSprite = name;
+	},
         
         getArmorName: function() {
             var sprite = this.getArmorSprite();

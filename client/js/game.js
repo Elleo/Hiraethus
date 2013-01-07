@@ -66,7 +66,8 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
             this.spriteNames = ["hand", "sword", "loot", "target", "talk", "sparks", "shadow16", "rat", "skeleton", "skeleton2", "spectre", "boss", "deathknight", 
                                 "ogre", "crab", "snake", "eye", "bat", "goblin", "wizard", "guard", "king", "villagegirl", "villager", "coder", "agent", "rick", "scientist", "nyan", "priest", 
                                 "sorcerer", "octocat", "beachnpc", "forestnpc", "desertnpc", "lavanpc", "clotharmor", "leatherarmor", "mailarmor", 
-                                "platearmor", "redarmor", "goldenarmor", "firefox", "death", "sword1", "axe", "chest",
+                                "lightmale", "lightfemale", "tannedmale", "tannedfemale", "tanned2male", "tanned2female", "darkmale", "darkfemale",
+                                "platearmor", "redarmor", "goldenarmor", "firefox", "death", "sword1", "daggermale", "daggerfemale", "axe", "chest",
                                 "sword2", "redsword", "bluesword", "goldensword", "item-sword2", "item-axe", "item-redsword", "item-bluesword", "item-goldensword", "item-leatherarmor", "item-mailarmor", 
                                 "item-platearmor", "item-redarmor", "item-goldenarmor", "item-flask", "item-cake", "item-burger", "morningstar", "item-morningstar", "item-firepotion"];
         },
@@ -117,10 +118,12 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
             if(this.storage.hasAlreadyPlayed()) {
                 this.player.setSpriteName(this.storage.data.player.armor);
                 this.player.setWeaponName(this.storage.data.player.weapon);
-            }
-        
-        	this.player.setSprite(this.sprites[this.player.getSpriteName()]);
-        	this.player.idle();
+            } else {
+        	this.player.setSpriteName(skinColor + gender);
+                this.player.setWeaponName("dagger" + gender);
+	    }
+            this.player.setSprite(this.sprites[this.player.getSpriteName()]);
+            this.player.idle();
         
     	    log.debug("Finished initPlayer");
         },

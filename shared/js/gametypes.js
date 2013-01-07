@@ -89,7 +89,19 @@ Types = {
         GOLDENSWORD: 63,
         MORNINGSTAR: 64,
         AXE: 65,
-        BLUESWORD: 66
+        BLUESWORD: 66,
+	DAGGERMALE: 67,
+	DAGGERFEMALE: 68,
+
+	// Base characters
+	LIGHTMALE: 100,
+	LIGHTFEMALE: 101,
+	TANNEDMALE: 102,
+	TANNEDFEMALE: 103,
+	TANNED2MALE: 104,
+	TANNED2FEMALE: 105,
+	DARKMALE: 106,
+	DARKFEMALE: 107
     },
     
     Orientations: {
@@ -124,6 +136,8 @@ var kinds = {
     bluesword: [Types.Entities.BLUESWORD, "weapon"],
     goldensword: [Types.Entities.GOLDENSWORD, "weapon"],
     morningstar: [Types.Entities.MORNINGSTAR, "weapon"],
+    daggermale: [Types.Entities.DAGGERMALE, "weapon"],
+    daggerfemale: [Types.Entities.DAGGERFEMALE, "weapon"],
     
     firefox: [Types.Entities.FIREFOX, "armor"],
     clotharmor: [Types.Entities.CLOTHARMOR, "armor"],
@@ -155,21 +169,32 @@ var kinds = {
     forestnpc: [Types.Entities.FORESTNPC, "npc"],
     desertnpc: [Types.Entities.DESERTNPC, "npc"],
     lavanpc: [Types.Entities.LAVANPC, "npc"],
+
+    lightmale: [Types.Entities.LIGHTMALE, "player"],
+    lightfemale: [Types.Entities.LIGHTFEMALE, "player"],
+    tannedmale: [Types.Entities.TANNEDMALE, "player"],
+    tannedfemale: [Types.Entities.TANNEDFEMALE, "player"],
+    tanned2male: [Types.Entities.TANNED2MALE, "player"],
+    tanned2female: [Types.Entities.TANNED2FEMALE, "player"],
+    darkmale: [Types.Entities.DARKMALE, "player"],
+    darkfemale: [Types.Entities.DARKFEMALE, "player"],
     
     getType: function(kind) {
         return kinds[Types.getKindAsString(kind)][1];
     }
 };
 
-Types.rankedWeapons = [
-    Types.Entities.SWORD1,
-    Types.Entities.SWORD2,
-    Types.Entities.AXE,
-    Types.Entities.MORNINGSTAR,
-    Types.Entities.BLUESWORD,
-    Types.Entities.REDSWORD,
-    Types.Entities.GOLDENSWORD
-];
+var weaponRank = {
+    "daggermale": 1,
+    "daggerfemale": 1,
+    "sword1": 2,
+    "sword2": 3,
+    "axe": 4,
+    "morningstar": 5,
+    "bluesword": 6,
+    "redsword": 7,
+    "goldensword": 8
+};
 
 Types.rankedArmors = [
     Types.Entities.CLOTHARMOR,
@@ -181,7 +206,7 @@ Types.rankedArmors = [
 ];
 
 Types.getWeaponRank = function(weaponKind) {
-    return _.indexOf(Types.rankedWeapons, weaponKind);
+    return weaponRank[Types.getKindAsString(weaponKind)];
 };
 
 Types.getArmorRank = function(armorKind) {
